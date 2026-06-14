@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -324,7 +324,7 @@
             padding: 18px;
         }
 
-        .panel + .panel {
+        .panel+.panel {
             margin-top: 14px;
         }
 
@@ -704,6 +704,7 @@
         }
 
         @media (max-width: 920px) {
+
             .hero,
             .app-grid {
                 grid-template-columns: 1fr;
@@ -808,7 +809,8 @@
                 <div>
                     <span class="pill">Browser-only MVP for podcasts and interviews</span>
                     <h1 style="margin-top: 18px;">Record multiple phones. Export one polished MP4.</h1>
-                    <p class="lead">Create a recording room, invite devices, record locally in the browser, save media chunks, and export real WebM files you can use immediately.</p>
+                    <p class="lead">Create a recording room, invite devices, record locally in the browser, save media
+                        chunks, and export real WebM files you can use immediately.</p>
                     <div class="hero-actions">
                         <button class="button primary large" id="create-room">Create Recording Room</button>
                         <button class="button large" data-nav="join">Join Existing Room</button>
@@ -836,7 +838,8 @@
                 <div class="section-head">
                     <div>
                         <h2>Controller room</h2>
-                        <p class="subtle" style="margin-top: 10px;">Share the invite link, check device readiness, choose the render layout, then start and stop every recorder through room control.</p>
+                        <p class="subtle" style="margin-top: 10px;">Share the invite link, check device readiness,
+                            choose the render layout, then start and stop every recorder through room control.</p>
                     </div>
                     <button class="button primary" id="new-room">New Room</button>
                 </div>
@@ -908,7 +911,8 @@
                                 </label>
                                 <div class="controls">
                                     <button class="button primary large" id="start-recording">Start Recording</button>
-                                    <button class="button danger large" id="stop-recording" disabled>Stop Recording</button>
+                                    <button class="button danger large" id="stop-recording" disabled>Stop
+                                        Recording</button>
                                 </div>
                                 <div>
                                     <div class="row">
@@ -939,7 +943,8 @@
                                     <div class="tile"><span>Camera B</span></div>
                                     <div class="tile"><span>Microphone / Wide</span></div>
                                 </div>
-                                <p class="subtle">This single-file version records real local WebM chunks. Select clips on the result page to render a grid or PiP WebM in the browser.</p>
+                                <p class="subtle">This single-file version records real local WebM chunks. Select clips
+                                    on the result page to render a grid or PiP WebM in the browser.</p>
                             </div>
                         </div>
                     </div>
@@ -952,7 +957,8 @@
                 <div class="section-head">
                     <div>
                         <h2>Join room</h2>
-                        <p class="subtle" style="margin-top: 10px;">Open the invite link on a device, choose a role, allow camera/microphone, record locally, then download the real WebM file.</p>
+                        <p class="subtle" style="margin-top: 10px;">Open the invite link on a device, choose a role,
+                            allow camera/microphone, record locally, then download the real WebM file.</p>
                     </div>
                 </div>
 
@@ -974,11 +980,13 @@
                         <button class="button primary large" id="request-media">Allow Camera / Mic</button>
                         <video id="preview" playsinline muted autoplay></video>
                         <div class="controls">
-                            <button class="button primary large" id="start-local" disabled>Start Local Recording</button>
+                            <button class="button primary large" id="start-local" disabled>Start Local
+                                Recording</button>
                             <button class="button danger large" id="stop-local" disabled>Stop Local Recording</button>
                         </div>
                         <button class="button hidden" id="download-local">Download Local WebM</button>
-                        <div class="warning">Mobile warning: keep this tab open, disable screen lock if possible, and avoid backgrounding the browser while recording or uploading.</div>
+                        <div class="warning">Mobile warning: keep this tab open, disable screen lock if possible, and
+                            avoid backgrounding the browser while recording or uploading.</div>
                         <div class="row">
                             <span class="subtle">Permission</span>
                             <strong id="permission-state">Not requested</strong>
@@ -1008,7 +1016,8 @@
                 <div class="section-head">
                     <div>
                         <h2>Render result</h2>
-                        <p class="subtle" style="margin-top: 10px;">Download recorded WebM clips, or select multiple video files and render a grid/PiP WebM directly in the browser.</p>
+                        <p class="subtle" style="margin-top: 10px;">Download recorded WebM clips, or select multiple
+                            video files and render a grid/PiP WebM directly in the browser.</p>
                     </div>
                     <button class="button" data-nav="controller">Back to Controller</button>
                 </div>
@@ -1016,9 +1025,11 @@
                 <div class="app-grid">
                     <div class="result-player">
                         <div id="empty-result">
-                            <span class="pill"><span class="dot"></span><span id="result-state">Waiting for render</span></span>
+                            <span class="pill"><span class="dot"></span><span id="result-state">Waiting for
+                                    render</span></span>
                             <h2 style="margin-top: 18px;">Browser WebM export</h2>
-                            <p class="subtle" style="margin-top: 12px;">Record a clip or import files to create an export.</p>
+                            <p class="subtle" style="margin-top: 12px;">Record a clip or import files to create an
+                                export.</p>
                         </div>
                         <video id="result-video" class="hidden" controls playsinline></video>
                         <canvas id="render-canvas" class="hidden" width="1280" height="720"></canvas>
@@ -1039,7 +1050,8 @@
                             </div>
                             <div class="stack">
                                 <input class="file-input" id="media-files" type="file" accept="video/*" multiple>
-                                <p class="subtle">Select one to three recorded WebM/video files. The browser draws them into the selected layout and records the canvas as a WebM export.</p>
+                                <p class="subtle">Select one to three recorded WebM/video files. The browser draws them
+                                    into the selected layout and records the canvas as a WebM export.</p>
                                 <button class="button primary" id="render-browser-video">Render Selected Clips</button>
                                 <button class="button hidden" id="download-rendered">Download Rendered WebM</button>
                             </div>
@@ -1072,11 +1084,16 @@
                                 <span class="pill">For MP4 + real multi-device rooms</span>
                             </div>
                             <div class="timeline">
-                                <div class="step"><span class="step-num">1</span><span>Fastify or Express creates anonymous rooms and device records in PostgreSQL.</span></div>
-                                <div class="step"><span class="step-num">2</span><span>WebSocket server broadcasts START and STOP with server timestamps.</span></div>
-                                <div class="step"><span class="step-num">3</span><span>Each browser records locally with MediaRecorder and uploads small chunks to S3 or R2.</span></div>
-                                <div class="step"><span class="step-num">4</span><span>BullMQ queues an FFmpeg worker job with chunk metadata and selected layout.</span></div>
-                                <div class="step"><span class="step-num">5</span><span>Worker aligns clips by beep marker and offsets, mixes audio, writes the final MP4 URL.</span></div>
+                                <div class="step"><span class="step-num">1</span><span>Fastify or Express creates
+                                        anonymous rooms and device records in PostgreSQL.</span></div>
+                                <div class="step"><span class="step-num">2</span><span>WebSocket server broadcasts START
+                                        and STOP with server timestamps.</span></div>
+                                <div class="step"><span class="step-num">3</span><span>Each browser records locally with
+                                        MediaRecorder and uploads small chunks to S3 or R2.</span></div>
+                                <div class="step"><span class="step-num">4</span><span>BullMQ queues an FFmpeg worker
+                                        job with chunk metadata and selected layout.</span></div>
+                                <div class="step"><span class="step-num">5</span><span>Worker aligns clips by beep
+                                        marker and offsets, mixes audio, writes the final MP4 URL.</span></div>
                             </div>
                         </div>
                     </div>
@@ -1667,6 +1684,166 @@
         const initialView = window.location.hash.replace("#", "");
         if (["controller", "join", "result"].includes(initialView)) {
             setView(initialView);
+        }
+    </script>
+</body>
+
+<script src="./server.js"></script>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Code System</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f0f2f5;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        input,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        li {
+            padding: 8px;
+            background: #eee;
+            margin-top: 5px;
+            border-radius: 4px;
+            font-size: 12px;
+            word-break: break-all;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- SCREEN 1: LOBBY ENTRY -->
+    <div id="lobbyScreen" class="card">
+        <h2>Game Lobby</h2>
+        <button id="createBtn">Create New Room</button>
+        <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ccc;">
+        <input type="text" id="codeInput" placeholder="Enter 5-Letter Code">
+        <button id="joinBtn" style="background: #28a745;">Join Room</button>
+    </div>
+
+    <!-- SCREEN 2: INSIDE ROOM -->
+    <div id="roomScreen" class="card hidden">
+        <h2>Room: <span id="roomCodeDisplay" style="color: #007bff;">XXXXX</span></h2>
+        <p>Share this code with friends!</p>
+        <h3>Users in Room:</h3>
+        <ul id="userList"></ul>
+        <button id="leaveBtn" style="background: #dc3545;">Leave Room</button>
+    </div>
+
+    <!-- Load Socket.io client script automatically served by the server -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        // DOM Elements
+        const lobbyScreen = document.getElementById('lobbyScreen');
+        const roomScreen = document.getElementById('roomScreen');
+        const createBtn = document.getElementById('createBtn');
+        const joinBtn = document.getElementById('joinBtn');
+        const leaveBtn = document.getElementById('leaveBtn');
+        const codeInput = document.getElementById('codeInput');
+        const roomCodeDisplay = document.getElementById('roomCodeDisplay');
+        const userList = document.getElementById('userList');
+
+        // --- BUTTON ACTIONS ---
+        createBtn.addEventListener('click', () => {
+            socket.emit('create_room');
+        });
+
+        joinBtn.addEventListener('click', () => {
+            const code = codeInput.value;
+            if (code) socket.emit('join_room', code);
+        });
+
+        leaveBtn.addEventListener('click', () => {
+            window.location.reload(); // Quickest way to trigger a disconnect and reset state
+        });
+
+        // --- NETWORK EVENT LISTENERS ---
+        socket.on('room_created', (code) => {
+            showRoom(code);
+        });
+
+        socket.on('join_success', (code) => {
+            showRoom(code);
+        });
+
+        socket.on('join_error', (errorMessage) => {
+            alert(errorMessage);
+        });
+
+        socket.on('update_users', (usersArray) => {
+            userList.innerHTML = '';
+            usersArray.forEach(userId => {
+                const li = document.createElement('li');
+                li.textContent = userId === socket.id ? `${userId} (You)` : userId;
+                userList.appendChild(li);
+            });
+        });
+
+        socket.on('room_closed', (message) => {
+            alert(message);
+            window.location.reload();
+        });
+
+        // UI View Toggle Utility
+        function showRoom(code) {
+            lobbyScreen.classList.add('hidden');
+            roomScreen.classList.remove('hidden');
+            roomCodeDisplay.textContent = code;
         }
     </script>
 </body>
